@@ -8,10 +8,13 @@ Este proyecto es una aplicación web simple de lista de tareas (To-Do List) que 
 - **JavaScript (ES6+)**: Lógica de la aplicación, manipulación del DOM y gestión de eventos.
 - **Módulos de JavaScript**: Separación de lógica en archivos (`app.js`, `auxiliar.js`).
 - **Tailwind CSS**: Framework de utilidades para estilos rápidos y responsivos, incluido mediante CDN.
+- **SweetAlert2**: Librería para mostrar alertas y diálogos modernos, incluida mediante CDN.
 - **LocalStorage**: Persistencia de datos en el navegador para guardar tareas.
 
-## Uso de APIs externas
-No se utiliza ninguna API externa para datos. Solo se usa Tailwind CSS como CDN para los estilos.
+## Uso de librerías externas
+No se utiliza ninguna API externa para datos. Se usan las siguientes librerías vía CDN:
+- **Tailwind CSS** para los estilos.
+- **SweetAlert2** para las alertas y confirmaciones.
 
 ## Inicialización del proyecto
 1. Descarga o clona el repositorio.
@@ -19,18 +22,19 @@ No se utiliza ninguna API externa para datos. Solo se usa Tailwind CSS como CDN 
 3. No se requiere instalación de dependencias ni servidor, ya que todo funciona en el navegador.
 4. Si deseas modificar estilos, puedes editar `tailwind.config.js`, pero no es necesario para el funcionamiento básico.
 
-El proyecto funciona directamente en el navegador y los módulos están enlazados en el HTML.
+El proyecto funciona directamente en el navegador y los módulos están enlazados en el HTML. Las dependencias externas (Tailwind CSS y SweetAlert2) se cargan mediante CDN en el archivo HTML.
 
 ## Funcionalidades principales
 - Agregar nuevas tareas a la lista.
-- Eliminar tareas individuales.
-- Limpiar todas las tareas.
+- Eliminar tareas individuales con botón dedicado.
+- Limpiar todas las tareas con confirmación mediante SweetAlert2 (optimización en el flujo de confirmación y mensajes).
 - Persistencia automática de tareas usando LocalStorage.
+- Recuperación automática de tareas al recargar la página.
 
 ## Estructura de archivos
 - `js/index.html`: Archivo HTML principal.
-- `js/app.js`: Lógica principal de la aplicación.
-- `js/auxiliar.js`: Funciones auxiliares para guardar y recuperar datos.
+- `js/app.js`: Lógica principal de la aplicación (gestión de tareas, eventos y renderizado).
+- `js/auxiliar.js`: Funciones auxiliares para guardar y recuperar datos en LocalStorage.
 - `tailwind.config.js`: Configuración de Tailwind (opcional, ya que se usa CDN).
 
 ---

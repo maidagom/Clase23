@@ -24,8 +24,31 @@ guardar("estados", historicoTareas)
 });
 
 btnlimpiar.addEventListener("click", function(evento){
-    listadoTareas.innerHTML = "";
-    guardar("estados", "[]")
+    Swal.fire({
+      title: "¿Quieres eliminar las tareas?",
+      text: "No podrás revertir esto!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#65a30d",
+      cancelButtonColor: "#d33",
+      cancelButtonText: "Cancelar",
+      confirmButtonText: "Si, Quiero eliminar!"
+    }).then(function(objeto) {
+        if (!objeto.isConfirmed) {
+            return Swal.fire({
+                title: "No eliminado!",
+                text: "Se mantuvieron los datos.",
+                icon: "error"
+            });
+        }
+        listadoTareas.innerHTML = "";
+        guardar("estados", []);
+        Swal.fire({
+            title: "Eliminado!",
+            text: "Las tareas fueron eliminadas.",
+            icon: "success"
+        });
+    });
 });
 
 function recuperarTodo() {

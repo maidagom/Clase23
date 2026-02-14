@@ -1,8 +1,8 @@
 export function guardar(clave, valor) {
-    valor = JSON.stringify(valor);
-    localStorage.setItem(clave, valor);
+    localStorage.setItem(clave, JSON.stringify(valor));
 }
 
 export function recuperar(clave) {
-    return JSON.parse(localStorage.getItem(clave));
+    const dato = localStorage.getItem(clave);
+    return dato ? JSON.parse(dato) : null;
 }
