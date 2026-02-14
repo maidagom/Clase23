@@ -8,13 +8,13 @@ Este proyecto es una aplicación web simple de lista de tareas (To-Do List) que 
 - **JavaScript (ES6+)**: Lógica de la aplicación, manipulación del DOM y gestión de eventos.
 - **Módulos de JavaScript**: Separación de lógica en archivos (`app.js`, `auxiliar.js`).
 - **Tailwind CSS**: Framework de utilidades para estilos rápidos y responsivos, incluido mediante CDN.
-- **SweetAlert2**: Librería para mostrar alertas y diálogos modernos, incluida mediante CDN.
+- **SweetAlert2 v11.26.18**: Librería para mostrar alertas y diálogos modernos, incluida mediante CDN o archivo local (`js/SweetAlert2.js`).
 - **LocalStorage**: Persistencia de datos en el navegador para guardar tareas.
 
 ## Uso de librerías externas
-No se utiliza ninguna API externa para datos. Se usan las siguientes librerías vía CDN:
+No se utiliza ninguna API externa para datos. Se usan las siguientes librerías vía CDN o archivo local:
 - **Tailwind CSS** para los estilos.
-- **SweetAlert2** para las alertas y confirmaciones.
+- **SweetAlert2 v11.26.18** para las alertas y confirmaciones (puede usarse desde CDN o desde el archivo `js/SweetAlert2.js`).
 
 ## Inicialización del proyecto
 1. Descarga o clona el repositorio.
@@ -22,7 +22,7 @@ No se utiliza ninguna API externa para datos. Se usan las siguientes librerías 
 3. No se requiere instalación de dependencias ni servidor, ya que todo funciona en el navegador.
 4. Si deseas modificar estilos, puedes editar `tailwind.config.js`, pero no es necesario para el funcionamiento básico.
 
-El proyecto funciona directamente en el navegador y los módulos están enlazados en el HTML. Las dependencias externas (Tailwind CSS y SweetAlert2) se cargan mediante CDN en el archivo HTML.
+El proyecto funciona directamente en el navegador y los módulos están enlazados en el HTML. Las dependencias externas (Tailwind CSS y SweetAlert2) se cargan mediante CDN en el archivo HTML, o puedes usar el archivo local `js/SweetAlert2.js` si lo prefieres.
 
 ## Funcionalidades principales
 - Agregar nuevas tareas a la lista.
