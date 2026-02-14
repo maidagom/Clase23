@@ -19,6 +19,16 @@ const tarea = `<li class="flex justify-between items-center">
 </li>`
 listadoTareas.insertAdjacentHTML("beforeend", tarea);
 
+Toastify({
+  text: `Nueva tarea agregada: ${textoTarea.value}`,
+  duration: 2500,
+  gravity: "bottom", // `top` or `bottom`
+  position: "right", // `left`, `center` or `right`
+  style: {
+    background: "linear-gradient(to right, #00b09b, #96c93d)",
+  }
+}).showToast();
+
 guardar("estados", historicoTareas)
 
 });

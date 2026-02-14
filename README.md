@@ -9,12 +9,14 @@ Este proyecto es una aplicación web simple de lista de tareas (To-Do List) que 
 - **Módulos de JavaScript**: Separación de lógica en archivos (`app.js`, `auxiliar.js`).
 - **Tailwind CSS**: Framework de utilidades para estilos rápidos y responsivos, incluido mediante CDN.
 - **SweetAlert2 v11.26.18**: Librería para mostrar alertas y diálogos modernos, incluida mediante CDN o archivo local (`js/SweetAlert2.js`).
+- **Toastify JS**: Librería para mostrar notificaciones tipo toast, incluida mediante CDN.
 - **LocalStorage**: Persistencia de datos en el navegador para guardar tareas.
 
 ## Uso de librerías externas
 No se utiliza ninguna API externa para datos. Se usan las siguientes librerías vía CDN o archivo local:
 - **Tailwind CSS** para los estilos.
 - **SweetAlert2 v11.26.18** para las alertas y confirmaciones (puede usarse desde CDN o desde el archivo `js/SweetAlert2.js`).
+- **Toastify JS** para notificaciones visuales al agregar tareas.
 
 ## Inicialización del proyecto
 1. Descarga o clona el repositorio.
@@ -25,7 +27,7 @@ No se utiliza ninguna API externa para datos. Se usan las siguientes librerías 
 El proyecto funciona directamente en el navegador y los módulos están enlazados en el HTML. Las dependencias externas (Tailwind CSS y SweetAlert2) se cargan mediante CDN en el archivo HTML, o puedes usar el archivo local `js/SweetAlert2.js` si lo prefieres.
 
 ## Funcionalidades principales
-- Agregar nuevas tareas a la lista.
+- Agregar nuevas tareas a la lista (con notificación visual usando Toastify).
 - Eliminar tareas individuales con botón dedicado.
 - Limpiar todas las tareas con confirmación mediante SweetAlert2 (optimización en el flujo de confirmación y mensajes).
 - Persistencia automática de tareas usando LocalStorage.
